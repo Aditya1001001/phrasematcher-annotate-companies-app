@@ -29,10 +29,10 @@ def prepare_matcher():
 
     names, symbols = [], []
 
-    with open("../names.txt", "r") as f:
+    with open("names.txt", "r") as f:
         names = f.readlines()
 
-    with open("../symbols.txt", "r") as f:
+    with open("symbols.txt", "r") as f:
         symbols = f.readlines()
 
     patterns = [nlp.make_doc(name.strip()) for name in names]
