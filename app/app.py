@@ -54,12 +54,12 @@ st.write("To learn more about spaCy's PhraseMatcher, read our in-depth article \
     [here](https://newscatcherapi.com/blog/ultimate-guide-to-text-similarity-with-python).")
 
 
-text = st.text_area("Enter the text you want to label", value="Microsoft (MSFT) \
+text = st.text_area("Enter the text you want to label", value="Microsoft (MSFT)\
     dipped 2.4% after announcing the software giant will buy video game company\
     Activision Blizzard (ATVI) in an all-cash transaction valued at $68.7\
-    billion. Shares of Activision Blizzard surged 25.9%. \nThe shortened\
-    trading week will feature quarterly reports from 35 companies in the \
-    S&P 500, including Bank of America (BAC), UnitedHealth (UNH), and \
+    billion. \nThe shortened\
+    trading week will feature quarterly reports from 35 companies in the\
+    S&P 500, including Bank of America (BAC), UnitedHealth (UNH), and\
     Netflix (NFLX).",
     help = 'Text to label', placeholder = 'Enter the text you want to label', height = 200)
 
