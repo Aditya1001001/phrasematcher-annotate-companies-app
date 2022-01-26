@@ -56,11 +56,14 @@ st.write("To learn more about spaCy's PhraseMatcher, read our in-depth article \
 
 text = st.text_area("Enter the text you want to label", value="Microsoft (MSFT)\
     dipped 2.4% after announcing the software giant will buy video game company\
-    Activision Blizzard (ATVI) in an all-cash transaction valued at $68.7\
-    billion. \nThe shortened\
-    trading week will feature quarterly reports from 35 companies in the\
-    S&P 500, including Bank of America (BAC), UnitedHealth (UNH), and\
-    Netflix (NFLX).",
+    Activision Blizzard, Inc (ATVI) in an all-cash transaction \
+valued at $68.7 billion. \nThe shortened trading week will feature quarterly \
+reports from 35 companies in the S&P 500, including Bank of America (BAC), \
+UnitedHealth Group (UNH), and Netflix (NFLX). \nGeneral Motors (GM) said it \
+will invest roughly $6.6 billion in its home state of Michigan through \
+2024. GM has projected it will overtake Tesla (TSLA) as the \
+top U.S.-based seller of electric vehicles by mid-decade. Retailer Gap (GPS) \
+shares fell 6.7% after Morgan Stanley downgraded the retailer.",
     help = 'Text to label', placeholder = 'Enter the text you want to label', height = 200)
 
 st.sidebar.markdown("### What Do You Want To Match For?")
