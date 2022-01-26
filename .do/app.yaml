@@ -1,0 +1,8 @@
+name: phrasematcher-annotate-companies-app
+services:
+- dockerfile_path: Dockerfile
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: Aditya1001001/phrasematcher-annotate-companies-app
+  name: phrasematcher-annotate-companies-app

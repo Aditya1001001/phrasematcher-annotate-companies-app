@@ -1,0 +1,8 @@
+spec:
+  name: similarity-and-embedding-app
+  services:
+  - dockerfile_path: Dockerfile
+    git:
+      branch: main
+      repo_clone_url: https://github.com/Aditya1001001/similarity-and-embedding-app.git
+    name: similarity-and-embedding-app
