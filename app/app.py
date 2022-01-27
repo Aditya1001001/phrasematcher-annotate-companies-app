@@ -51,7 +51,7 @@ st.write("spaCy's PhraseMatcher class enables us to efficiently match large \
     lists of phrases. In this app, we use it to annotate organization names \
         and stock ticker symbols.")
 st.write("To learn more about spaCy's PhraseMatcher, read our in-depth article \
-    [here](https://newscatcherapi.com/blog/ultimate-guide-to-text-similarity-with-python).")
+    [here](https://newscatcherapi.com/blog/how-to-annotate-entities-with-spacy-phrase-macher).")
 
 
 text = st.text_area("Enter the text you want to label", value="Microsoft (MSFT)\
