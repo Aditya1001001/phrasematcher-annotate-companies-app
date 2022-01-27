@@ -59,7 +59,7 @@ text = st.text_area("Enter the text you want to label", value="Microsoft (MSFT)\
     Activision Blizzard, Inc (ATVI) in an all-cash transaction \
 valued at $68.7 billion. \nThe shortened trading week will feature quarterly \
 reports from 35 companies in the S&P 500, including Bank of America (BAC), \
-UnitedHealth Group (UNH), and Netflix (NFLX). \nGeneral Motors (GM) said it \
+UnitedHealth Group (UNH), and Netflix (NFLX). \nGeneral Motors said it \
 will invest roughly $6.6 billion in its home state of Michigan through \
 2024. GM has projected it will overtake Tesla (TSLA) as the \
 top U.S.-based seller of electric vehicles by mid-decade. Retailer Gap (GPS) \
@@ -71,7 +71,7 @@ match_org = st.sidebar.checkbox('Organization Names', value = True, help = "Do y
 match_ticker = st.sidebar.checkbox('Ticker Symbols', value = True, help = "Do you want to \
         match for organization ticker symbols?")
 
-flag = st.sidebar.button('Annotate Text')
+flag = st.button('Annotate Text')
 
 if flag:
     if len(text) == 0:
@@ -115,15 +115,21 @@ if flag:
                 # longest versions of the names/symbols will appear only once    
 
                 for ent_type in matches_with_dup.keys():
-                    matches = matches_with_dup[ent_type]
-                    keys = matches.keys()
-                    counts = {text:0 for text in keys}
-                    for text in keys:
-                        for key in keys:
-                            if text in key:
-                                counts[text] += 1
-                    for text, count in counts.items():
-                        if count == 1:
+                    if ent_type == "ORG":
+                        matches = matches_with_dup[ent_type]
+                        keys = matches.keys()
+                        counts = {text:0 for text in keys}
+                        for text in keys:
+                            for key in keys:
+                                if text in key:
+                                    counts[text] += 1
+                        for text, count in counts.items():
+                            if count == 1:
+                                plot_data['ents'].append(matches[text])
+                    else:
+                        matches = matches_with_dup[ent_type]
+                        keys = matches.keys()
+                        for text in keys:
                             plot_data['ents'].append(matches[text])
                 
                 plot_data['ents'] = sorted(plot_data['ents'], key=lambda ent: ent["start"]) 
